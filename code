@@ -1,0 +1,6 @@
+import random
+
+led_list = []
+
+def add_to_sequence():
+    
