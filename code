@@ -1,6 +1,55 @@
 import random
+import time
+import board
+from digitalio import DigitalInOut, Direction
 
-led_list = []
 
-def add_to_sequence():
+red = DigitalInOut(board.D2)
+red.direction = Direction.OUTPUT
+blue = DigitalInOut(board.D3)
+blue.direction = Direction.OUTPUT
+yellow = DigitalInOut(board.D4)
+yellow.direction = Direction.OUTPUT
+white = DigitalInOut(board.D5)
+white.direction = Direction.OUTPUT
+
+white = DigitalInOut(board.D6)
+green = DigitalInOut(board.D7)
+yellow = DigitalInOut(board.D8)
+orange = DigitalInOut(board.D9)
+red= DigitalInOut(board.D11)
+
+white.direction = Direction.INPUT
+green.direction = Direction.INPUT
+yellow.direction = Direction.INPUT
+orange.direction = Direction.INPUT
+red.direction = Direction.INPUT
+
+my_list = []
+
+def add_to_sequence(list):
+    list.append(random.randint(0 , 3))
+
+def display_sequence(list):
+    p = " "
+    for x in list:
+        if x == 0:
+            p = "red"
+            print(p)
+        elif x == 1:
+            p = "green"
+            print(p)
+        elif x == 2:
+            p = "Yellow"
+            print(p)
+        else:
+            p = "Blue"
+            print(p)
+
+def game_start():
+    
+def user_sequence():
+
+def reset_game():
+
     
